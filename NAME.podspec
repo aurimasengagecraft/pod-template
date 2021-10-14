@@ -30,10 +30,12 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.5'
 
+  s.static_framework = true
+
   s.source_files = '${POD_NAME}/Classes/**/*'
   
   s.resource_bundles = {
-    '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
+    '${POD_NAME}' => ['${POD_NAME}/Assets/*.{xcassets,xib,storyboard,strings}']
   }
 
   s.dependency 'GamesLib/Native'
