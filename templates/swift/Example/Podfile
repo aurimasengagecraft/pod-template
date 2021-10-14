@@ -17,6 +17,8 @@ target '${POD_NAME}_Example' do
   pod 'GamesLib/NativeDev', :git => 'git@github.com:UEFADigital/gaminghub-rn-core-library.git', :branch => 'chore/ios-native-fork'
   pod 'GamesLib/NativeHostLogin', :git => 'git@github.com:UEFADigital/gaminghub-rn-core-library.git', :branch => 'chore/ios-native-fork'
 
+  pod 'Google-Mobile-Ads-SDK', '~> 7.69.0' # new version 8.0.0  is not compatible with react-native-admob
+
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
 
