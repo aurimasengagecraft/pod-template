@@ -26,15 +26,17 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '${USER_NAME}' => '${USER_EMAIL}' }
   s.source           = { :git => 'https://github.com/${USER_NAME}/${POD_NAME}.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
+  
+  s.ios.deployment_target = '13.0'
+  s.swift_version = '5.5'
 
   s.source_files = '${POD_NAME}/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
+  }
+
+  s.dependency 'GamesLib/Native'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

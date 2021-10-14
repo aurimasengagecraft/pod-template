@@ -2,8 +2,20 @@ use_frameworks!
 
 platform :ios, '9.0'
 
+def idp_sdk
+  idpSdkVersion = '7.0.0'
+  pod 'gigya-swift-sdk', :git => 'git@github.com:UEFADigital/ios-idp-sdk.git',  :tag => idpSdkVersion
+  pod 'iOSIdpSdk', :git => 'git@github.com:UEFADigital/ios-idp-sdk.git', :tag => idpSdkVersion
+end
+
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
+
+  idp_sdk
+
+  pod 'GamesLib/Native', :git => 'git@github.com:UEFADigital/gaminghub-rn-core-library.git', :branch => 'chore/ios-native-fork'
+  pod 'GamesLib/NativeDev', :git => 'git@github.com:UEFADigital/gaminghub-rn-core-library.git', :branch => 'chore/ios-native-fork'
+  pod 'GamesLib/NativeHostLogin', :git => 'git@github.com:UEFADigital/gaminghub-rn-core-library.git', :branch => 'chore/ios-native-fork'
 
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
