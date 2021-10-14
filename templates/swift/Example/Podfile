@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '13.0'
 
 def idp_sdk
   idpSdkVersion = '7.0.0'
