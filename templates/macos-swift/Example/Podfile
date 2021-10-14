@@ -1,4 +1,4 @@
-use_frameworks!
+use_frameworks! :linkage => :dynamic
 
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
